@@ -1,1 +1,14 @@
-# es6-11demo
+## Project setup
+```
+npm install
+```
+
+### Compiles for development
+```
+npm run start
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
