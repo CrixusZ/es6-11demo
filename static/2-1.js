@@ -15,9 +15,21 @@ console.log(a) //5
 console.log(window.a)//undefind
 
 // 暂时性死区
-var a=5
-if( true) {
-  // 在作用域内必须先声明了才能使用
-  a = 6;
-  let a
-}
+// var a=5
+// if( true) {
+//   // 在作用域内必须先声明了才能使用
+//   a = 6;
+//   let a
+// }
+const // 声明常量只是定义栈内存，堆内存里可以修改(就是内存地址)
+const obj = {
+  name: 'zengjiahao',
+  age: 31,
+  skill: {
+    name: 'code',
+    year: 6
+  }
+}``
+// 冻结对象以后对象属性就不可改
+// fressze只能传入对象，不能传入数组
+Object.freeze(obj)
