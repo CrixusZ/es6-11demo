@@ -13,3 +13,11 @@
 let a = 5;
 console.log(a) //5
 console.log(window.a)//undefind
+
+// 暂时性死区
+var a=5
+if( true) {
+  // 在作用域内必须先声明了才能使用
+  a = 6;
+  let a
+}
