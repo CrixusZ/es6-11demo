@@ -13,3 +13,13 @@
 let a = 5;
 console.log(a) //5
 console.log(window.a)//undefind
+let sum = (x, y) => x + y
+// console.log(sum(4, 5))
+
+for(var i =0; i< 3;i++) {
+  (function(j){
+    setTimeout(function(){
+      console.log(j)
+    })
+  })(i)
+}
