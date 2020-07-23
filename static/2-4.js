@@ -68,3 +68,26 @@ for(let index in arr) {
 }
 
 // es6 的数组遍历方式
+let res4 = arr.find((value)=>{
+  return value === 2
+})
+console.log(arr,res4)
+let res5 = arr.findIndex((value)=>{
+  return value === 2
+})
+console.log(arr,res5)
+
+// for(let item of arr.values()){
+//   console.log(item)
+// }
+
+// for(let item of arr){
+//   console.log(item)
+// }
+
+for(let item of arr.keys()){
+  console.log(item)
+}
+for(let [index, item] of arr.entries()){
+  console.log(item, index)
+}
