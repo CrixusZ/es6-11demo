@@ -5,4 +5,7 @@
 // import './../static/2-7'
 // import './../static/2-8'
 // import './../static/2-9'
-import './../static/2-10'
+// import './../static/2-10'
+// import './../static/2-11'
+// import './../static/2-12'
+import './../static/2-13'
