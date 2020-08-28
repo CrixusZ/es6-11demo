@@ -19,7 +19,7 @@ function ajax(url,callback){
   xmlhttp.open('GET',url,true)
   xmlhttp.send()
   // 3.服务器响应
-  xmlhttp.onreadstatechange = function(){
+  xmlhttp.onreadystatechange = function(){
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
       var obj = JSON.parse(xmlhttp.responseText)
       console.log(obj)
