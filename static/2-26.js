@@ -43,6 +43,16 @@ let courses = {
     frontend: ['ES','小程序','Vue','React'],
     backend: ['Java','Python','SpringBoot'],
     webapp: ['Android','IOS','Webapp']
+  },
+  student: {
+    zengjiahao: ['typeScript','性能优化','vue全家桶','Antd+React'],
+    yangqianlin: ['erp项目','wms项目','tms项目'],
+    linchunruo: ['商家端APP','性能优化','vue全家桶','Antd+React'],
+  },
+  leader: {
+    gaotongjian: ['vue','react','js','html'],
+    liaodunxi: ['java','数据库'],
+    liaojiewei: ['Spring','python']
   }
 }
 // 可迭代协议: Symbol.iterator
@@ -72,24 +82,31 @@ let courses = {
 // }
 
 courses[Symbol.iterator] = function* () {
-  let allCourse = this.allCourse
-  let keys = Reflect.ownKeys(allCourse)
-  console.log(keys)
+  // let allCourse = this.allCourse
+  // let keys = Reflect.ownKeys(allCourse)
+  // let parentKeys = Object.keys(this)
+  // console.log(parentKeys)
   let values = []
-  while (1) {
-    if(!values.length){
-      if(keys.length){
-        values = allCourse[keys[0]]
-        keys.shift()
-        yield values.shift()
+  for(let key of Object.keys(this)){
+    console.log(key)
+    let keys = Reflect.ownKeys(this[key])
+    console.log(keys)
+    while(1){
+      if(!values.length){
+        if(keys.length){
+          values = this[key][keys[0]]
+          keys.shift()
+          yield values.shift()
+        }else{
+          return false
+        }
       }else{
-        return false
+        yield values.shift()
       }
-    }else{
-      yield values.shift()
     }
   }
 }
 for(let c of courses) {
   console.log(c)
 }
+console.log(courses)

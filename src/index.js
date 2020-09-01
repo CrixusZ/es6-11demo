@@ -20,4 +20,6 @@
 // import './../static/2-22'
 // import './../static/2-23'
 // import './../static/2-25'
-import './../static/2-26'
+// import './../static/2-26'
+// import './../static/2-27'
+import './../static/2-28'
