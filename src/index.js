@@ -40,4 +40,5 @@
 // import '../static/6-5'
 // import '../static/6-6'
 // import '../static/6-7'
-import '../static/7-1'
+// import '../static/7-1'
+import '../static/7-2'
